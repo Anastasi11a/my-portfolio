@@ -1,8 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { Header } from "./components";
 
 function App() {
     return (
-        <div className="App">
+        <div>
+            <Header />
             <main>
                 <Routes>
                     <Route path="*" element={<h2>Page Not Found</h2>} />
