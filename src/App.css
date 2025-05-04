@@ -1,7 +1,7 @@
 :root {
     --dark-bg: #212529;
     --bg-secondary: #343a40;
-    --dark-text: #f8f9fa;
+    --text: #f8f9fa;
     --accent: #0dcaf0;
     --border: #6c757d;
 }
@@ -10,10 +10,34 @@
     background-color: var(--bg-secondary) !important;
 }
 
+.bg-navbar {
+    background-color: var(--dark-bg) !important;
+}
+
 .text-dark-text {
-    color: var(--dark-text) !important;
+    color: var(--text) !important;
 }
 
 .text-accent {
     color: var(--accent) !important;
+}
+
+.border {
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.social-item .social-icon {
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+.social-item:hover .social-icon,
+.social-item:focus .social-icon {
+    color: var(--accent);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: transparent !important;
+    color: var(--text) !important;
 }
