@@ -57,3 +57,29 @@
     color: var(--accent);
     transform: scale(1.2);
 }
+
+.footer-text {
+    letter-spacing: 0.05em;
+}
+
+/* Animated */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animated-fadeInUp {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.avatar-img {
+    transition: transform 0.3s ease;
+}
+.avatar-img:hover {
+    transform: scale(1.1);
+}

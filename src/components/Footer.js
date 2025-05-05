@@ -22,7 +22,7 @@ const Footer = () => {
                 </Col>
             </Row>
             <Row>
-                <Col className="text-center text-light fs-6 mb-2 pb-3">
+                <Col className="text-center text-uppercase text-light fs-6 mb-2 mt-2 pb-3 footer-text">
                     Anastasiia Alekseeva • © 2025
                 </Col>
             </Row>
