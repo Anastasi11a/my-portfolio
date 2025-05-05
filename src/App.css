@@ -26,6 +26,7 @@
     border-bottom: 1px solid var(--border) !important;
 }
 
+/* Header */
 .social-item .social-icon {
     color: var(--text);
     transition: color 0.3s;
@@ -40,4 +41,19 @@
 .dropdown-item:active {
     background-color: transparent !important;
     color: var(--text) !important;
+}
+
+/* Footer */
+.footer-link {
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: var(--accent);
+    transform: scale(1.2);
 }
