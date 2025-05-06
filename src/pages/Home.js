@@ -1,6 +1,6 @@
 import { Button, Container, Col, Row, Image } from "react-bootstrap";
 
-import avatar from '../assets/logo-transporent.png';
+import avatar from '../assets/avatar.png';
 import cv from '../data/Alekseeva_Anastasiia.pdf';
 import { content } from '../constants/homeContent';
 
