@@ -4,7 +4,7 @@ import socials from "../constants/socials";
 
 const Footer = () => {
     return (
-        <Container fluid className="w-100 p-3 bg-dark border-top border-secondary">
+        <Container fluid className="w-100 p-3 bg-footer border-top border-black">
             <Row className="justify-content-center">
                 <Col xs="auto">
                     <Nav>
