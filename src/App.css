@@ -3,7 +3,7 @@
     --bg-primary: #343a40;
     --text: #f8f9fa;
     --accent: #0dcaf0;
-    /* --border: #6c757d; */
+    --img-border: #6c757d;
     --dark-footer: #1c1f21;
     --dark-border: #191c1f;
 }
@@ -84,8 +84,10 @@
 }
 
 .avatar-img {
+    border: 3px solid var(--img-border);
+    padding: 6px 4px 0;
     transition: transform 0.3s ease;
 }
 .avatar-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }

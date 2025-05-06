@@ -1,6 +1,6 @@
 import { Button, Container, Col, Row, Image } from "react-bootstrap";
 
-import avatar from '../assets/avatar.jpg';
+import avatar from '../assets/logo-transporent.png';
 import cv from '../data/Alekseeva_Anastasiia.pdf';
 import { content } from '../constants/homeContent';
 
@@ -21,8 +21,10 @@ const Home = () => {
             <Row>
                 <Col className="text-center mb-5">
                     <h1 className="mb-3 fs-3 text-dark-text">{content.greeting}</h1>
-                    <p className="mb-2 fs-2 fw-bold text-accent animated-fadeInUp">{content.bio1}</p>
-                    <p className="mb-3 fs-4 fw-bold text-dark-text animated-fadeInUp">{content.bio2}</p>
+                    <p className="mb-2 fs-3 fw-bold text-uppercase text-accent animated-fadeInUp">{content.role}</p>
+                    <p className="mb-3 fs-4 fw-bold text-dark-text animated-fadeInUp">
+                        {content.focus} <br/> {content.tagline}
+                    </p>
 
                     <Button
                         href={cv}
