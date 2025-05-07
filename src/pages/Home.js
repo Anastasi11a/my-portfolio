@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button, Container, Col, Row, Image } from "react-bootstrap";
 
 import avatar from '../assets/avatar.png';
@@ -5,6 +6,8 @@ import cv from '../data/Alekseeva_Anastasiia.pdf';
 import { content } from '../constants/homeContent';
 
 const Home = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <Container fluid className="min-vh-100 d-flex flex-column justify-content-center align-items-center pt-5 bg-home">
             <Row className="align-items-center justify-content-center">
@@ -13,8 +16,11 @@ const Home = () => {
                         src={avatar}
                         alt="Anastasiia's Avatar"
                         fluid
-                        roundedCircle
-                        className="mx-auto d-block avatar-img"
+                        className={`mx-auto d-block avatar-img ${
+                            isHovered ? 'rounded' : 'rounded-circle'
+                        }`}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                     />
                 </Col>
             </Row>
@@ -30,7 +36,7 @@ const Home = () => {
                         href={cv}
                         download="cv.pdf"
                         variant="outline-info"
-                        className="mt-3"
+                        className="mt-4"
                     >
                         Download CV
                     </Button>
