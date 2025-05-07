@@ -4,6 +4,11 @@ export const brandClass = 'fs-3 fw-bold text-accent';
 export const navCollapseClass = 'justify-content-end me-4 fs-5';
 export const socialItemClass = 'd-flex justify-content-center py-2 social-item';
 
+// Footer
+export const footerContainer = 'w-100 p-3 bg-footer border-top border-black';
+export const rowCenterClass = 'justify-content-center';
+export const footerTextClass = 'text-center text-uppercase text-light fs-6 mb-2 mt-2 pb-3 footer-text';
+
 // Home
 export const containerClass = 'min-vh-100 d-flex flex-column justify-content-center align-items-center pt-5 bg-home';
 export const centeredRowClass = 'align-items-center justify-content-center';

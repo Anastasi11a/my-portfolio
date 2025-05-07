@@ -1,11 +1,17 @@
 import { Container, Col, Row, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import socials from "../constants/socials";
+import {
+    footerContainer,
+    rowCenterClass,
+    footerTextClass
+} from "../utils/classNames";
 
 const Footer = () => {
     return (
-        <Container fluid className="w-100 p-3 bg-footer border-top border-black">
-            <Row className="justify-content-center">
+        <Container fluid className={footerContainer}>
+            <Row className={rowCenterClass}>
                 <Col xs="auto">
                     <Nav>
                         {socials.map(({ icon, url }) => (
@@ -22,7 +28,7 @@ const Footer = () => {
                 </Col>
             </Row>
             <Row>
-                <Col className="text-center text-uppercase text-light fs-6 mb-2 mt-2 pb-3 footer-text">
+                <Col className={footerTextClass}>
                     Anastasiia Alekseeva • © 2025
                 </Col>
             </Row>
