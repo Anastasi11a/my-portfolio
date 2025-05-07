@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import socials from "../constants/socials";
+import {
+    navbarClass,
+    brandClass,
+    navCollapseClass,
+    socialItemClass,
+} from '../utils/classNames';
 
 const Header = () => {
     const navItems = [
@@ -10,37 +17,51 @@ const Header = () => {
     ];
 
     return (
-        <Navbar 
+        <Navbar  
             collapseOnSelect 
             fixed="top" 
             expand="sm" 
             data-bs-theme="dark"
-            className="py-2 px-4 bg-navbar border-navbar shadow-sm"
+            className={navbarClass}
         >
             <Container fluid>
-                <Navbar.Brand className="fs-3 fw-bold text-accent">Portfolio</Navbar.Brand>
+                <Navbar.Brand className={brandClass}>
+                    Portfolio
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse 
                     id="responsive-navbar-nav"
-                    className="justify-content-end me-4 fs-5"
+                    className={navCollapseClass}
                 >
                     <Nav defaultActiveKey="/portfolio/">
                         {navItems.map(( { label, to }) => (
-                            <Nav.Link as={Link} to={to} key={to} className="me-3">
+                            <Nav.Link 
+                                as={Link} 
+                                to={to} 
+                                key={to} 
+                                className="me-3"
+                            >
                                 {label}
                             </Nav.Link>
                         ))}
 
-                        <NavDropdown title="Contact" id="collapsible-nav-dropdown"> 
+                        <NavDropdown 
+                            title="Contact" 
+                            id="collapsible-nav-dropdown"
+                        > 
                             {socials.map(({ icon, url }) => (
                                 <NavDropdown.Item
                                     key={url}
                                     href={url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="d-flex justify-content-center py-2 social-item"
+                                    className={socialItemClass}
                                 >
-                                    <FontAwesomeIcon icon={icon} size="2x" className="social-icon"/>
+                                    <FontAwesomeIcon 
+                                        icon={icon} 
+                                        size="2x" 
+                                        className="social-icon"
+                                    />
                                 </NavDropdown.Item>
                             ))}
                         </NavDropdown>
