@@ -2,7 +2,7 @@ import projectQuiz from '../assets/quiz.jpg';
 import projectLemon from '../assets/little-lemon.jpg';
 import projectPassword from '../assets/password.jpg';
 
-const projectsList = [
+export const projectsList = [
     {
         title: "Restaurant Website",
         img: projectLemon,
@@ -44,5 +44,3 @@ const projectsList = [
         ],
     },
 ];
-
-export default projectsList;

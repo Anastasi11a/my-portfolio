@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 function App() {
     return (
@@ -12,12 +13,13 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/portfolio/" element={<Home />} />
+                    <Route path="/portfolio/projects" element={<Projects />} />
                     <Route path="*" element={<h2>Page Not Found</h2>} />
                 </Routes>
             </main>
             <Footer />
         </div>
     );
-}
+};
 
 export default App;

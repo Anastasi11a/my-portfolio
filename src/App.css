@@ -92,3 +92,8 @@
     transform: scale(1.2);
     border: none;
 }
+
+/* Projects */
+.bg-card {
+    background-color: var(--bg-primary);
+}
