@@ -6,6 +6,7 @@
     --img-border: #6c757d;
     --dark-footer: #1c1f21;
     --dark-border: #191c1f;
+    --bg-card: #1b1f23;
 }
 
 .bg-home {
@@ -95,5 +96,10 @@
 
 /* Projects */
 .bg-card {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-card);
+}
+
+.card-img {
+    width: 18rem;
+    height: 12rem;
 }

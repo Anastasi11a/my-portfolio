@@ -1,44 +1,16 @@
-import { Container, Col, Row, Card } from "react-bootstrap";
-import ButtonLink from "../components/ButtonLink";
+import { Container, Col, Row } from "react-bootstrap";
+import ProjectCard from "../components/ProjectCard";
 import { projectsList } from "../constants/projectsList";
-import {
-    sectionClass,
-    projectsContainer, 
-    cardClass, 
-    cardImgClass, 
-    cardTitleClass, 
-    cardTextClass, 
-    skillsTxtClass
-} from '../utils/classNames';
+import { section, projectsContainer } from '../utils/classNames';
 
 const Projects = () => {
     return (
-        <section className={sectionClass}>
+        <section className={section}>
             <Container fluid className={projectsContainer}>
                 <Row xs={1} md={2} lg={3} className="g-4">
                     {projectsList.map((project, i) => (
                         <Col key={i}>
-                            <Card className={cardClass}>
-                                <a href={project.visitLink} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                                    <Card.Body>
-                                        <Card.Title className={cardTitleClass}>{project.title}</Card.Title>
-                                        <Card.Img src={project.img} alt={project.title} className={cardImgClass} />
-                                    </Card.Body>
-                                </a>
-                                <Card.Body>
-                                    <Card.Text className={cardTextClass}>
-                                        <strong>Description:</strong>
-                                        <div className={skillsTxtClass}>{project.description}</div>
-                                        <strong>Features:</strong>
-                                        <div className={skillsTxtClass}>{project.features}</div>
-                                        <strong>Technologies used:</strong>
-                                        <div className={skillsTxtClass}>{project.skills}</div>
-                                        <div className="mt-2">
-                                            GitHub repository: <ButtonLink link={project.gitHubLink} />
-                                        </div>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
+                            <ProjectCard project={project} />
                         </Col>
                     ))}
                 </Row>
