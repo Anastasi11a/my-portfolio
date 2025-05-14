@@ -1,5 +1,6 @@
 :root {
     --dark-bg: #212529;
+    /* --bg-dark: #111827; */
     --bg-primary: #343a40;
     --text: #f8f9fa;
     --accent: #0dcaf0;
@@ -7,6 +8,7 @@
     --dark-footer: #1c1f21;
     --dark-border: #191c1f;
     --bg-card: #1b1f23;
+    --bg-transp: transparent;
 }
 
 .bg-home {
@@ -15,6 +17,10 @@
 
 .bg-navbar {
     background-color: var(--dark-bg) !important;
+}
+
+.bg-transp {
+    background-color: var(--bg-transp);
 }
 
 .text-dark-text {
@@ -102,4 +108,41 @@
 .card-img {
     width: 18rem;
     height: 12rem;
+}
+
+.card-title {
+    color: var(--text);
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.card-title:hover,
+.card-title:focus {
+    color: var(--accent);
+}
+
+.skills-text {
+    color: var(--img-border);
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.skills-text:hover {
+    color: var(--text);
+}
+
+.collapse-item.active,
+.collapse-item:active {
+    background-color: transparent !important;
+    color: var(--text) !important;
+}
+
+.github-icon {
+    color: var(--text);
+    transition: transform 0.3s;
+}
+
+.github-icon:hover,
+.github-icon:focus {
+    transform: scale(1.4);
 }
