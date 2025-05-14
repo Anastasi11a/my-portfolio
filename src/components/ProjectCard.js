@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, Collapse, Button } from "react-bootstrap";
 import ButtonLink from "./ButtonLink";
-import { card, cardImg, cardTitle, cardText, skillsTxt } from "../utils/classNames";
+import { card, cardImg, cardTitle, cardText, skillsText, cardBtn } from "../utils/classNames";
 
 const ProjectCard = ({ project }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,27 +21,24 @@ const ProjectCard = ({ project }) => {
                 </Card.Body>
             </a>
             <Card.Body>
+                <Card.Text className={cardText}>{project.description}</Card.Text>
                 <Card.Text className={cardText}>
-                    <div className={skillsTxt}>{project.description}</div>
-                    <div className={skillsTxt}>
-                        <strong>Technologies: </strong>{project.skills}
-                    </div>
-
-                    <div className={skillsTxt}>
-                        <Button
-                            variant="link"
-                            size="md"
-                            className="p-0 text-light mt-1"
-                            onClick={() => setIsOpen(!isOpen)}
-                            aria-expanded={isOpen}>
-                            {isOpen ? 'Read less' : 'Read more'}
-                        </Button>
-                        <Collapse in={isOpen}>
-                            <div>{project.features}</div>
-                        </Collapse>
-                    </div>
-                    <div>GitHub repository: <ButtonLink link={project.gitHubLink} /></div>
+                    Technologies:<span className={skillsText}>{project.skills}</span>
                 </Card.Text>
+                <Card.Text className={cardText}>
+                    <Button
+                        variant="link"
+                        className={cardBtn}
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-expanded={isOpen}>
+                        {isOpen ? 'Read less' : 'Read more'}
+                    </Button>
+                    <Collapse in={isOpen}>
+                        <Card.Text>{project.features}</Card.Text>
+                    </Collapse>
+                </Card.Text>
+                
+                <ButtonLink link={project.gitHubLink} />
             </Card.Body>
         </Card>
     );
