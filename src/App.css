@@ -146,3 +146,10 @@
 .github-icon:focus {
     transform: scale(1.4);
 }
+
+.tooltip-inner {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: var(--text);
+    color: var(--bg-card);
+}

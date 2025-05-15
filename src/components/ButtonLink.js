@@ -9,7 +9,11 @@ const ButtonLink = ({ link }) => {
         <Container className={githubLink}>
             <OverlayTrigger 
                 placement='bottom'
-                overlay={<Tooltip id='tooltip-github'>go to GitHub repository</Tooltip>}
+                overlay={
+                    <Tooltip id='tooltip-github'>
+                        go to GitHub repository
+                    </Tooltip>
+                }
             >
                 <Link to={link} alt='GitHub link' target='_blank'>
                     <FontAwesomeIcon icon={faGithub} size='2x' className="github-icon" />
