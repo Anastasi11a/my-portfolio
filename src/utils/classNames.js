@@ -26,9 +26,9 @@ export const projectsContainer = 'min-vh-100 d-flex flex-column justify-content-
 export const card = 'h-100 text-light border-0 shadow-sm bg-card';
 export const cardImg = 'd-block mx-auto mb-1 rounded card-img';
 export const cardTitle = 'text-center fw-bold fs-3 mb-3 card-title';
-export const cardText = 'text-start text-light fs-6 mb-3';
+export const cardText = 'text-start text-light fs-6 mb-2';
 export const skillsText = 'fw-bold fs-5 ps-2';
 export const cardBtn = 'p-0 mb-1 text-decoration-none skills-text collapse-item';
 
 // ButtonLink
-export const githubLink = "d-flex justify-content-end mt-3"
+export const githubLink = "d-flex justify-content-end mb-3 pe-3"

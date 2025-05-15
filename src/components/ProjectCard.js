@@ -37,9 +37,8 @@ const ProjectCard = ({ project }) => {
                         <Card.Text>{project.features}</Card.Text>
                     </Collapse>
                 </Card.Text>
-                
-                <ButtonLink link={project.gitHubLink} />
             </Card.Body>
+            <ButtonLink link={project.gitHubLink} />
         </Card>
     );
 };
