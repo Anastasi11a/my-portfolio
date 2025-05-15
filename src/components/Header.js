@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import socials from "../constants/socials";
-import {
-    navbarClass,
-    brandClass,
-    navCollapseClass,
-    socialItemClass,
-} from '../utils/classNames';
+import { navbar, brand, navCollapse, socialItem } from '../utils/classNames';
 
 const Header = () => {
     const navItems = [
@@ -22,16 +16,16 @@ const Header = () => {
             fixed="top" 
             expand="sm" 
             data-bs-theme="dark"
-            className={navbarClass}
+            className={navbar}
         >
             <Container fluid>
-                <Navbar.Brand className={brandClass}>
+                <Navbar.Brand className={brand}>
                     Portfolio
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse 
                     id="responsive-navbar-nav"
-                    className={navCollapseClass}
+                    className={navCollapse}
                 >
                     <Nav defaultActiveKey="/portfolio/">
                         {navItems.map(( { label, to }) => (
@@ -55,7 +49,7 @@ const Header = () => {
                                     href={url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={socialItemClass}
+                                    className={socialItem}
                                 >
                                     <FontAwesomeIcon 
                                         icon={icon} 
