@@ -25,7 +25,8 @@
 .text-accent {
     color: var(--accent) !important;
 }
-.features-text {
+.features-text,
+.custom-list li::marker {
     color: var(--color-secondary);
 }
 .card-title,

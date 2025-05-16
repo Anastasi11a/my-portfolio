@@ -34,7 +34,11 @@ const ProjectCard = ({ project }) => {
                         {isOpen ? 'Read less' : 'Read more'}
                     </Button>
                     <Collapse in={isOpen}>
-                        <Card.Text>{project.features}</Card.Text>
+                        <Card.Text as='ul' className="mb-0 custom-list">
+                            {project.features.split(',').map((f, inx) => (
+                                <li key={inx}>{f.trim()}</li>
+                            ))}
+                        </Card.Text>
                     </Collapse>
                 </Card.Text>
             </Card.Body>
