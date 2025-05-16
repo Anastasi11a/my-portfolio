@@ -1,81 +1,116 @@
 :root {
-    --dark-bg: #212529;
-    /* --bg-dark: #111827; */
-    --bg-primary: #343a40;
-    --text: #f8f9fa;
+    --bg-primary: #212529;
+    --bg-secondary: #1b1f23;
+    --color-primary: #f8f9fa;
+    --color-secondary: #6c757d;
     --accent: #0dcaf0;
-    --img-border: #6c757d;
-    --dark-footer: #1c1f21;
-    --dark-border: #191c1f;
-    --bg-card: #1b1f23;
-    --bg-transp: transparent;
 }
 
-.bg-home {
-    background-color: var(--dark-bg) !important;
+/* Backgrounds  */
+.bg-primary {
+    background-color: var(--bg-primary) !important;
+}
+.bg-secondary {
+    background-color: var(--bg-secondary) !important;
 }
 
-.bg-navbar {
-    background-color: var(--dark-bg) !important;
+/* Text Colors */
+.dropdown-item.active,
+.dropdown-item:active,
+.collapse-item.active,
+.collapse-item:active {
+    background-color: transparent !important;
+    color: var(--color-primary) !important;
 }
-
-.bg-transp {
-    background-color: var(--bg-transp);
-}
-
-.text-dark-text {
-    color: var(--text) !important;
-}
-
 .text-accent {
     color: var(--accent) !important;
 }
+.features-text {
+    color: var(--color-secondary);
+}
+.card-title,
+.features-text:hover {
+    color: var(--color-primary);
+}
 
+/* Borders */
 .border-navbar {
-    border-bottom: 1px solid var(--dark-border) !important;
+    border-bottom: 1px solid var(--bg-secondary) !important;
+}
+.avatar-img {
+    border: 3px solid var(--color-secondary);
 }
 
-/* Header */
-.social-item .social-icon {
-    color: var(--text);
-    transition: color 0.3s;
+/* Social Icons */
+.social-icon {
+    color: var(--color-primary);
 }
-
 .social-item:hover .social-icon,
-.social-item:focus .social-icon {
+.social-item:focus .social-icon,
+.footer-link:hover,
+.footer-link:focus,
+.card-title:hover,
+.card-title:focus {
     color: var(--accent);
 }
-
-.dropdown-item.active,
-.dropdown-item:active {
-    background-color: transparent !important;
-    color: var(--text) !important;
+.social-icon,
+.footer-link,
+.card-title,
+.features-text {
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 
 /* Footer */
-.bg-footer {
-    background-color: var(--dark-footer) !important;
-}
-
 .footer-link {
-    color: var(--text);
+    color: var(--color-primary);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.3s, transform 0.3s;
 }
-
 .footer-link:hover,
 .footer-link:focus {
-    color: var(--accent);
     transform: scale(1.2);
 }
-
 .footer-text {
     letter-spacing: 0.05em;
 }
 
-/* Animated */
+/* Avatar Image */
+.avatar-img {
+    padding: 6px 2px 0;
+    transition: transform 0.3s ease, border 0.3s ease, padding 0.3s ease;
+}
+.avatar-img:hover {
+    transform: scale(1.2);
+    border: none;
+}
+
+/* Card */
+.card-img {
+    width: 18rem;
+    height: 12rem;
+}
+
+/* GitHub Icon */
+.github-icon {
+    color: var(--color-primary);
+    transition: transform 0.3s;
+}
+.github-icon:hover,
+.github-icon:focus {
+    transform: scale(1.4);
+}
+
+/* Tooltip */
+.tooltip-inner {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: var(--color-primary);
+    color: var(--bg-secondary);
+}
+
+/* Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -88,68 +123,4 @@
 }
 .animated-fadeInUp {
     animation: fadeInUp 0.8s ease-out;
-}
-
-.avatar-img {
-    border: 3px solid var(--img-border);
-    padding: 6px 2px 0;
-    transition: transform 0.3s ease, border 0.3s ease, padding 0.3s ease;
-}
-.avatar-img:hover {
-    transform: scale(1.2);
-    border: none;
-}
-
-/* Projects */
-.bg-card {
-    background-color: var(--bg-card);
-}
-
-.card-img {
-    width: 18rem;
-    height: 12rem;
-}
-
-.card-title {
-    color: var(--text);
-    transition: color 0.3s;
-    cursor: pointer;
-}
-
-.card-title:hover,
-.card-title:focus {
-    color: var(--accent);
-}
-
-.skills-text {
-    color: var(--img-border);
-    transition: color 0.3s;
-    cursor: pointer;
-}
-
-.skills-text:hover {
-    color: var(--text);
-}
-
-.collapse-item.active,
-.collapse-item:active {
-    background-color: transparent !important;
-    color: var(--text) !important;
-}
-
-.github-icon {
-    color: var(--text);
-    transition: transform 0.3s;
-}
-
-.github-icon:hover,
-.github-icon:focus {
-    transform: scale(1.4);
-}
-
-.tooltip-inner {
-    margin-top: 10px;
-    padding: 6px 12px;
-    background-color: var(--text);
-    color: var(--bg-card);
 }
