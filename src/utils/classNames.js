@@ -17,6 +17,7 @@ export const image = 'mx-auto d-block avatar-img';
 export const greeting = 'mb-3 fs-3 text-light';
 export const role = 'mb-2 fs-3 fw-bold text-uppercase animated-fadeInUp text-accent';
 export const tagline = 'mb-3 fs-4 fw-bold text-light animated-fadeInUp';
+export  const cvBtn = 'mt-4 shadow cv-btn';
 
 // Projects
 export const section = 'bg-dark py-5';

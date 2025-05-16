@@ -96,6 +96,10 @@
     height: 12rem;
 }
 
+.cv-btn {
+    min-width: 12rem;
+}
+  
 /* GitHub Icon */
 .github-icon {
     color: var(--color-primary);

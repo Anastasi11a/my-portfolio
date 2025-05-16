@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button, Container, Col, Row, Image } from "react-bootstrap";
+
 import avatar from '../assets/avatar.png';
-import cv from '../data/Alekseeva_Anastasiia.pdf';
+import cv from '../data/CV.pdf';
 import { content } from '../constants/homeContent';
 import {
     homeContainer,
@@ -11,6 +12,7 @@ import {
     greeting,
     role,
     tagline,
+    cvBtn
 } from '../utils/classNames';
 
 const Home = () => {
@@ -42,11 +44,12 @@ const Home = () => {
 
                     <Button
                         href={cv}
-                        download="cv.pdf"
-                        variant="outline-info"
-                        className="mt-4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="outline-secondary"
+                        className={cvBtn}
                     >
-                        Download CV
+                        View CV
                     </Button>
                 </Col>
             </Row>
