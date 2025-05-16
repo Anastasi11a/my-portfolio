@@ -40,6 +40,9 @@
 .avatar-img {
     border: 3px solid var(--color-secondary);
 }
+.no-cursor {
+    cursor: default !important;
+}
 
 /* Social Icons */
 .social-icon {

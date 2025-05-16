@@ -1,6 +1,6 @@
 // Header
 export const navbar = 'py-2 px-4 shadow-sm bg-primary border-navbar';
-export const brand = 'fs-3 fw-bold text-accent';
+export const brand = 'fs-3 fw-bold text-accent no-cursor';
 export const navCollapse = 'justify-content-end me-4 fs-5';
 export const socialItem = 'd-flex justify-content-center py-2 social-item';
 

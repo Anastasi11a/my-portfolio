@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./components/Header";
@@ -12,6 +12,7 @@ function App() {
             <Header />
             <main>
                 <Routes>
+                    <Route path="/" element={<Navigate to="/portfolio/" />} />
                     <Route path="/portfolio/" element={<Home />} />
                     <Route path="/portfolio/projects" element={<Projects />} />
                     <Route path="*" element={<h2>Page Not Found</h2>} />
