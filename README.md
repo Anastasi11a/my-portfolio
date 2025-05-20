@@ -12,3 +12,5 @@ A personal portfolio built with React and Bootstrap v5 to showcase projects, ski
 - FontAwesome
 - React Router
 - CSS custom properties (variables)
+  
+- ![Screenshot-portfolio](https://github.com/user-attachments/assets/a208bb93-420e-4da6-b419-2be11238f939)
