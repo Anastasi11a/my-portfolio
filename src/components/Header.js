@@ -6,7 +6,7 @@ import { navbar, brand, navCollapse, socialItem } from '../utils/classNames';
 
 const Header = () => {
     const navItems = [
-        { label: 'Home', to: '/portfolio/' },
+        { label: 'Home', to: '/my-portfolio/' },
         { label: 'Projects', to: '/portfolio/projects' }
     ];
 

@@ -12,8 +12,8 @@ function App() {
             <Header />
             <main>
                 <Routes>
-                    <Route path="/" element={<Navigate to="/portfolio/" />} />
-                    <Route path="/portfolio/" element={<Home />} />
+                    <Route path="/" element={<Navigate to="/my-portfolio/" />} />
+                    <Route path="/my-portfolio/" element={<Home />} />
                     <Route path="/portfolio/projects" element={<Projects />} />
                     <Route path="*" element={<h2>Page Not Found</h2>} />
                 </Routes>
